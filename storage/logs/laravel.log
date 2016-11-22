@@ -1,0 +1,6 @@
+[2016-01-25 21:41:52] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Routing\Route::get()' in /home/ryan/Laravel/ryan/app/Http/routes.php:16
+Stack trace:
+#0 {main}  
+[2016-01-25 21:44:57] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Routing\Route::get()' in /home/ryan/Laravel/ryan/app/Http/routes.php:16
+Stack trace:
+#0 {main}  

@@ -1,0 +1,82 @@
+.presentation-container
+  lost-flex-container row
+  lost-column 1
+  margin-top 20px
+
+.presentation__blurb-holder
+  lost-column 1/3 0 0
+  height 300px
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+.blurb
+  top -.1em
+  left 7.3em
+  position: relative;
+  display:inline-block;
+  max-width:20em;
+  min-height:1.5em;
+  min-width:20em
+  padding: 10px;
+  background: #FFFFFF;
+  border: #7F7F7F solid 4px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  &:before
+    content: "";
+    position: absolute;
+    bottom: 7em;
+    left: 19.5em
+    border-style: solid;
+    border-width: 1em 2.3em 0;
+    border-color: #7F7F7F transparent;
+    display: block;
+    min-width 0;
+    z-index: 0;
+    -webkit-transform: rotate(113deg);
+    -moz-transform: rotate(113deg);
+    -ms-transform: rotate(113deg);
+    -o-transform: rotate(113deg);
+  &:after
+    content: "";
+    position: absolute;
+    bottom: 6.66em
+    left: 19.49em;
+    border-style: solid;
+    border-width: .9em 2em 0;
+    border-color: white transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    -webkit-transform: rotate(113deg);
+    -moz-transform: rotate(113deg);
+    -ms-transform: rotate(113deg);
+    -o-transform: rotate(113deg);
+
+.blurb__text
+  word-wrap: normal;
+  width 100%
+  min-height 30px
+  font-family Ariel
+  font-size 1.2em
+  color rgba(10, 21, 44, 0.96)
+    >p
+      margin 0
+@-moz-document url-prefix()
+  .blurb__text
+    font-size 1.065em
+
+.video-embed
+  lost-column 1/3 0 0
+  height 300px
+  lost-align: center
+  position: relative;
+
+.video-embed__iframe
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+

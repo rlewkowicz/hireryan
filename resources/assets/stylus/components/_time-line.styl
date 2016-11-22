@@ -1,0 +1,407 @@
+.time-line
+  lost-flex-container: row;
+  lost-column 1 0 0
+  >ul
+    padding 0
+    list-style-type:none
+    lost-flex-container: row;
+    lost-column 1 0 0
+    >li
+      position relative
+
+.time-line__employer
+  margin-top 50px
+  text-align: center;
+  lost-column 5/10 0 0
+  font-family: neucharegular;
+  font-size 1.8em
+  >a
+    text-decoration none
+    color black
+  >p
+    margin 0
+
+li:active,li:focus
+  outline: none;
+a:active,a:focus
+  outline: none;
+
+.ui-tabs-active.time-line__employer
+  &:after
+    text-decoration: underline
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid red;
+
+.time-line__project
+  margin-top 150px
+  margin-bottom 170px
+  lost-column 1/7 0 0
+  height: 0.3em;
+  border-top: 0.2em solid black;
+  position: relative;
+
+.time-line__project--first
+  width: 7%
+
+.time-line__project--last
+  width: 7%
+
+.time-line__arrow-holder
+  lost-column 1/13.79 0 0
+  border 0
+  &:before
+    position absolute
+    left 5.5em
+    top -.34em
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid black;
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+  &:after
+    position absolute
+    left 86em
+    top -.34em
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid black;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+
+/////////////////BEFORE
+
+.time-line__project--before
+  content: "";
+  display: inline-block;
+  position: absolute;
+  border-width: 0;
+  background: black;
+  width: 4em;
+  height: 0.2em;
+
+before-top-right = .33em
+before-top-bottom = 1.9em
+
+.time-line__project--top::before
+  @extends .time-line__project--before
+  -webkit-transform: rotate(125deg);
+  -moz-transform: rotate(125deg);
+  -ms-transform: rotate(125deg);
+  -o-transform: rotate(125deg);
+  right: before-top-right
+  bottom: before-top-bottom
+
+before-bottom-right = 8.06em
+before-bottom-bottom = -1.35em
+
+.time-line__project--bottom::before
+  @extends .time-line__project--before
+  -webkit-transform: rotate(55deg);
+  -moz-transform: rotate(55deg);
+  -ms-transform: rotate(55deg);
+  -o-transform: rotate(55deg);
+  right: before-bottom-right
+  bottom: before-bottom-bottom
+
+/////////////////END-BEFORE
+
+/////////////////AFTER
+
+.time-line__project--after
+  content: "";
+  display: inline-block;
+  position: absolute;
+  border-width: 0;
+  background: black;
+  width: 2em;
+  height: 0.2em;
+
+after-top-right = -9em
+after-top-bottom = 3.5em
+
+.time-line__project--top::after
+  @extends .time-line__project--after
+  right: after-top-right
+  bottom: after-top-bottom
+
+after-bottom-right = 6.99em
+after-bottom-bottom = -2.95em
+
+.time-line__project--bottom::after
+  @extends .time-line__project--after
+  right: after-bottom-right
+  bottom: after-bottom-bottom
+
+/////////////////END-AFTER
+
+.project--halfass
+  &::after
+    right: after-bottom-right+-6em
+  &::before
+    right: before-bottom-right+-6em
+
+.project--gns3
+  &::after
+    right: after-bottom-right+-9.3em
+  &::before
+    right: before-bottom-right+-9.3em
+
+.project--lead-tracker
+  &::after
+    right: after-bottom-right+.1em
+  &::before
+    right: before-bottom-right+.1em
+
+.project--keyborg
+  &::after
+    right: after-bottom-right+-5.7em
+  &::before
+    right: before-bottom-right+-5.7em
+
+.project--hireryan
+  &::after
+    right: after-bottom-right+-.5em
+  &::before
+    right: before-bottom-right+-.5em
+
+.project--binaryoasis
+  &::after
+    right: after-bottom-right+10em
+  &::before
+    right: before-bottom-right+10em
+
+.project--docker
+  z-index 1
+  &::after
+    right: after-bottom-right+-2.6em
+  &::before
+    right: before-bottom-right+-2.6em
+
+
+.project--halfass__container
+  position relative;
+  top -5.8em
+  right -5.7em
+  lost-center 270px
+  lost-align left
+  width 270px
+  text-decoration none
+  color black
+  >img
+    width: 100%
+  >p
+    position relative;
+    bottom 1.5em
+    left 2em
+    font-size 1.6em
+    font-family neucharegular
+
+.project--gns3__container
+  position relative;
+  top 4em
+  right -14.8em
+  lost-center 210px
+  width 210px
+  text-decoration none
+  color black
+  >div
+    lost-column 1/2 0 0
+    lost-align left
+    >img
+      width: 80%
+      position absolute;
+    &:last-child
+      >img
+        margin-top 7%
+        left -2em
+  &:after
+    content: "";
+    display: inline-block;
+    position: absolute;
+    border-width: 0;
+    background: red;
+    width: 1em;
+    height: .16em;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    right 8.05em
+    top -1.2em
+  &:before
+    content: "";
+    display: inline-block;
+    position: absolute;
+    border-width: 0;
+    background: red;
+    width: 1em;
+    height: .16em;
+    right 8.05em
+    top -1.2em
+  >p
+    position absolute
+    bottom -3.85em
+    left -.1em
+    font-size 1.6em
+    font-family neucharegular
+
+.project--keyborg__container
+  text-decoration none
+  color black
+  font-family jockey_oneregular
+  font-size 2 em
+  >p
+    position absolute
+    margin-left 10px
+    top -3.39em
+    right -4.22em
+@-moz-document url-prefix()
+  .project--keyborg__container
+    >p
+      right -4.6em
+
+.project--docker__container
+  position relative;
+  top 3.5em
+  right -8.3em
+  lost-center 210px
+  width 210px
+  text-decoration none
+  color black
+  >div
+    lost-column 1/2 0 0
+    lost-align left
+    >img
+      width: 100%
+      position absolute;
+    &:last-child
+      >img
+        margin-top -.6em
+        left .3em
+  &:after
+    content: "";
+    display: inline-block;
+    position: absolute;
+    border-width: 0;
+    background: red;
+    width: 1em;
+    height: .16em;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    right 6.4em
+    top -.81em
+  &:before
+    content: "";
+    display: inline-block;
+    position: absolute;
+    border-width: 0;
+    background: red;
+    width: 1em;
+    height: .16em;
+    right 6.4em
+    top -.81em
+  >p
+    position absolute
+    bottom -4.13em
+    left .8em
+    font-size 1.6em
+    font-family neucharegular
+
+.project--lead-tracker__container
+  text-decoration none
+  color black
+  font-family chunkfiveroman
+  font-size 1.7 em
+  width 30%
+  >p
+    width 30%
+    position relative
+    margin -.2em
+    top -2.8em
+    right -4em
+    padding 0
+@-moz-document url-prefix()
+  .project--lead-tracker__container
+    >p
+      right -4em
+
+.project--hireryan__container
+  position relative;
+  top -5.8em
+  right -3em
+  lost-center 270px
+  lost-align left
+  width 80px
+  text-decoration none
+  color black
+  >div
+    img
+      width 100%
+  >p
+    position relative;
+    bottom 1.5em
+    left -1.1em
+    font-size 1.6em
+    font-family neucharegular
+
+.project--binaryoasis__container
+  position relative;
+  top .5em
+  right 11.4em
+  lost-center 270px
+  lost-align left
+  width 270px
+  text-decoration none
+  color black
+  >div
+    img
+      width 100%
+  >p
+    position relative;
+    bottom -3.4em
+    left 3em
+    font-size 1.6em
+    font-family neucharegular
+
+.time-line__job
+  lost-column 1/3 0 0
+  text-align center
+  font-family: neucharegular;
+  font-size 1.8em
+  margin-bottom 10px
+  >p
+    margin 0
+  >a
+    color black
+    position relative
+    text-decoration none
+
+
+//.time-line__job--linux
+//  left -.4em
+
+.time-line__job--setups
+  left -2em
+
+.time-line__job--dev
+  left -6em
+
+
+

@@ -1,0 +1,35 @@
+.nav-tabs__portfolio
+  lost-column 1
+
+.portfolio__project-description
+  lost-flex-container row
+  lost-column 1
+  >.separator
+    width 80%
+
+.project-description__title
+  margin-top 25px
+  lost-column 1
+  font-family neucharegular
+  font-size 3em
+  text-align center
+
+.project-description__content
+  margin-top 20px
+  margin-bottom 27px
+  lost-column 15/20
+  lost-offset -2.5/20
+  font-family Verdana
+  font-size 1.11em
+  >p
+    margin 14px
+  >iframe
+    width 100%
+    height 64em
+   >img
+     width 100%
+
+
+@-moz-document url-prefix()
+  .project-description__content
+    font-size 1em
